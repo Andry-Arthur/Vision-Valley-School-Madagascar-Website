@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vision Valley School — Christian international school in Antananarivo, Madagascar. British curriculum, IGCSE & A-Level (Pearson Edexcel), Preschool through Grade 13.">
+<meta name="theme-color" content="#1e0d35">
+<link rel="canonical" href="https://www.visionvalleyschool.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vision Valley School — Antananarivo, Madagascar">
+<meta property="og:description" content="Nurturing faith, learning & leadership. British curriculum school serving 250+ students from 14+ nationalities since 2000.">
+<meta property="og:url" content="https://www.visionvalleyschool.com/">
+<meta property="og:image" content="https://www.visionvalleyschool.com/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<title>Vision Valley School — Antananarivo, Madagascar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ─── DESIGN TOKENS ─── */
+  :root {
+    --navy:    #1e0d35;
+    --navy-mid:#2d1650;
+    --gold:    #9b59b6;
+    --gold-lt: #b67fd4;
+    --gold-pale:#ede0f5;
+    --cream:   #faf6ff;
+    --stone:   #e4d8ef;
+    --text:    #130820;
+    --text-mid:#3a2050;
+    --white:   #fff;
+    --serif-display: 'Cinzel', serif;
+    --serif-body:    'Cormorant Garamond', serif;
+    --serif-text:    'EB Garamond', serif;
+  }
+
+  /* ─── RESET ─── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: var(--serif-text);
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+  /* ─── ORNAMENT SVG UTILITY ─── */
+  .ornament {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+    height: 18px;
+    opacity: .55;
+  }
+
+  /* ══════════════════════════════════════
+     NAV
+  ══════════════════════════════════════ */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    height: 72px;
+    background: rgba(30,13,53,.97);
+    border-bottom: 1px solid rgba(155,89,182,.3);
+    backdrop-filter: blur(8px);
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .nav-crest {
+    width: 44px; height: 44px;
+    flex-shrink: 0;
+  }
+  .nav-title-block { display: flex; flex-direction: column; gap: 1px; }
+  .nav-name {
+    font-family: var(--serif-display);
+    font-size: .72rem;
+    letter-spacing: .22em;
+    color: var(--gold-lt);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .nav-sub {
+    font-family: var(--serif-body);
+    font-size: .62rem;
+    color: rgba(182,127,212,.55);
+    letter-spacing: .15em;
+    font-style: italic;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    font-family: var(--serif-display);
+    font-size: .62rem;
+    letter-spacing: .18em;
+    color: rgba(250,246,238,.75);
+    text-transform: uppercase;
+    transition: color .25s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width .3s;
+  }
+  .nav-links a:hover { color: var(--gold-lt); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    font-family: var(--serif-display) !important;
+    font-size: .6rem !important;
+    letter-spacing: .18em !important;
+    color: var(--navy) !important;
+    background: var(--gold);
+    padding: .55rem 1.3rem;
+    border-radius: 1px;
+    transition: background .25s, color .25s !important;
+  }
+  .nav-cta:hover { background: var(--gold-lt) !important; color: var(--navy) !important; }
+  .nav-cta::after { display: none !important; }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 200;
+    padding: .75rem 1.25rem;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: var(--serif-display);
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+  }
+  .skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    outline: 2px solid var(--white);
+  }
+
+  .nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(155,89,182,.35);
+    background: transparent;
+    color: var(--gold-lt);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background .2s, border-color .2s;
+  }
+  .nav-toggle:hover { background: rgba(155,89,182,.12); border-color: var(--gold); }
+  .nav-toggle svg { width: 22px; height: 22px; }
+  .nav-toggle .icon-close { display: none; }
+  body.nav-open .nav-toggle .icon-menu { display: none; }
+  body.nav-open .nav-toggle .icon-close { display: block; }
+
+  /* ══════════════════════════════════════
+     HERO
+  ══════════════════════════════════════ */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--navy);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(155,89,182,.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 85% 50%, rgba(30,13,53,0) 0%, rgba(30,13,53,.95) 100%),
+      url('https://static.wixstatic.com/media/980a85_5ba5221691004bb38a8158a6099e7255~mv2.jpg/v1/fit/w_960,h_640,q_90,enc_avif,quality_auto/980a85_5ba5221691004bb38a8158a6099e7255~mv2.jpg') center/cover no-repeat;
+    filter: brightness(.38) sepia(.25);
+  }
+  /* Animated grain */
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: -200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: .15;
+    animation: grain 8s steps(10) infinite;
+  }
+  @keyframes grain {
+    0%,100%{transform:translate(0,0)}10%{transform:translate(-5%,-10%)}20%{transform:translate(-15%,5%)}30%{transform:translate(7%,-25%)}40%{transform:translate(-5%,25%)}50%{transform:translate(-15%,10%)}60%{transform:translate(15%,0%)}70%{transform:translate(0,15%)}80%{transform:translate(3%,35%)}90%{transform:translate(-10%,10%)}
+  }
+  /* Decorative top rule */
+  .hero-top-rule {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    max-width: 860px;
+    animation: fadeUp 1.4s cubic-bezier(.16,1,.3,1) both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-sup {
+    font-family: var(--serif-display);
+    font-size: .6rem;
+    letter-spacing: .35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+    display: block;
+  }
+  .hero-crest-large {
+    width: 110px; height: 110px;
+    margin: 0 auto 2rem;
+    filter: drop-shadow(0 0 30px rgba(155,89,182,.3));
+    animation: floatCrest 6s ease-in-out infinite;
+  }
+  @keyframes floatCrest {
+    0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}
+  }
+  .hero-title {
+    font-family: var(--serif-display);
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: .08em;
+    line-height: 1.1;
+    margin-bottom: .6rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-lt);
+    font-family: var(--serif-body);
+    font-weight: 300;
+  }
+  .hero-location {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: rgba(237,224,245,.6);
+    letter-spacing: .1em;
+    margin: 1rem 0 2rem;
+  }
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .hero-divider span { flex: 1; max-width: 120px; height: 1px; background: linear-gradient(90deg, transparent, rgba(155,89,182,.5)); }
+  .hero-divider span:last-child { background: linear-gradient(90deg, rgba(155,89,182,.5), transparent); }
+  .hero-divider-icon { color: var(--gold); font-size: 1rem; }
+  .hero-verse {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: rgba(237,224,245,.75);
+    line-height: 1.7;
+    max-width: 540px;
+    margin: 0 auto 2.5rem;
+  }
+  .hero-verse cite {
+    display: block;
+    font-style: normal;
+    font-family: var(--serif-display);
+    font-size: .55rem;
+    letter-spacing: .25em;
+    color: var(--gold);
+    margin-top: .7rem;
+    text-transform: uppercase;
+  }
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    font-family: var(--serif-display);
+    font-size: .6rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    padding: .9rem 2.2rem;
+    cursor: pointer;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold-lt);
+    transform: translateX(-100%);
+    transition: transform .35s;
+  }
+  .btn-primary:hover::before { transform: translateX(0); }
+  .btn-primary span { position: relative; z-index: 1; }
+  .btn-ghost {
+    font-family: var(--serif-display);
+    font-size: .6rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(237,224,245,.85);
+    background: transparent;
+    border: 1px solid rgba(155,89,182,.5);
+    padding: .9rem 2.2rem;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  .btn-ghost:hover {
+    border-color: var(--gold-lt);
+    color: var(--gold-lt);
+    background: rgba(155,89,182,.08);
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem; left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    color: rgba(155,89,182,.5);
+    font-family: var(--serif-display);
+    font-size: .5rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    animation: bounce 2.5s infinite;
+  }
+  @keyframes bounce {
+    0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}
+  }
+  .hero-scroll svg { width: 16px; height: 16px; }
+
+  /* ══════════════════════════════════════
+     SECTION LAYOUT HELPERS
+  ══════════════════════════════════════ */
+  section { padding: 6rem 2rem; scroll-margin-top: 88px; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-family: var(--serif-display);
+    font-size: .55rem;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: var(--serif-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 500;
+    color: var(--navy);
+    text-align: center;
+    letter-spacing: .04em;
+    line-height: 1.2;
+    margin-bottom: .8rem;
+  }
+  .section-title em {
+    font-style: italic;
+    font-family: var(--serif-body);
+    color: var(--gold);
+  }
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.2rem 0 2.5rem;
+  }
+  .section-rule span { flex: 1; max-width: 100px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+  .section-rule span:last-child { background: linear-gradient(90deg, var(--gold), transparent); }
+  .section-rule-diamond {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+  }
+
+  /* ══════════════════════════════════════
+     PILLARS (Why VVS)
+  ══════════════════════════════════════ */
+  #pillars { background: var(--white); }
+  .pillars-lead {
+    font-family: var(--serif-body);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-mid);
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 4rem;
+  }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--stone);
+  }
+  .pillar-card {
+    background: var(--white);
+    padding: 3rem 2.2rem;
+    text-align: center;
+    transition: background .3s, transform .3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .pillar-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform .4s;
+    transform-origin: left;
+  }
+  .pillar-card:hover::before { transform: scaleX(1); }
+  .pillar-card:hover { background: var(--cream); transform: translateY(-3px); }
+  .pillar-icon {
+    width: 52px; height: 52px;
+    margin: 0 auto 1.5rem;
+    color: var(--gold);
+  }
+  .pillar-card h3 {
+    font-family: var(--serif-display);
+    font-size: .8rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+  .pillar-card p {
+    font-family: var(--serif-text);
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+  }
+
+  /* ══════════════════════════════════════
+     STORY
+  ══════════════════════════════════════ */
+  #story { background: var(--cream); }
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .story-img-stack {
+    position: relative;
+    height: 540px;
+  }
+  .story-img-main {
+    position: absolute;
+    top: 0; left: 0;
+    width: 75%; height: 80%;
+    object-fit: cover;
+    border: 6px solid var(--white);
+    box-shadow: 0 20px 60px rgba(30,13,53,.2);
+  }
+  .story-img-accent {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 55%; height: 55%;
+    object-fit: cover;
+    border: 6px solid var(--white);
+    box-shadow: 0 20px 60px rgba(30,13,53,.25);
+  }
+  .story-img-badge {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px; height: 90px;
+    background: var(--navy);
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 6px var(--white);
+    z-index: 5;
+  }
+  .story-img-badge span {
+    font-family: var(--serif-display);
+    font-size: 1.4rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .story-img-badge small {
+    font-family: var(--serif-display);
+    font-size: .35rem;
+    letter-spacing: .18em;
+    color: rgba(182,127,212,.7);
+    text-transform: uppercase;
+  }
+  .story-body h2 {
+    font-family: var(--serif-display);
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: .04em;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  .story-body h2 em {
+    font-style: italic;
+    font-family: var(--serif-body);
+    color: var(--gold);
+  }
+  .story-body p {
+    font-family: var(--serif-text);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-mid);
+    margin-bottom: 1.2rem;
+  }
+  .story-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--stone);
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: var(--serif-display);
+    font-size: 2rem;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+    margin-bottom: .3rem;
+  }
+  .stat-label {
+    font-family: var(--serif-body);
+    font-size: .65rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+
+  /* ══════════════════════════════════════
+     ACADEMICS
+  ══════════════════════════════════════ */
+  #academics { background: var(--navy); position: relative; overflow: hidden; }
+  #academics::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(155,89,182,.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  #academics .section-title { color: var(--gold-pale); }
+  #academics .section-label { color: rgba(155,89,182,.7); }
+  .academics-intro {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: rgba(237,224,245,.65);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+    line-height: 1.8;
+  }
+  .academics-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .acad-card {
+    border: 1px solid rgba(155,89,182,.2);
+    padding: 2.5rem 2rem;
+    transition: border-color .3s, background .3s;
+    position: relative;
+  }
+  .acad-card::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 2rem; right: 2rem;
+    height: 2px;
+    background: var(--gold);
+    transition: left .4s, right .4s;
+  }
+  .acad-card:hover::before { left: 0; right: 0; }
+  .acad-card:hover { border-color: rgba(155,89,182,.5); background: rgba(155,89,182,.04); }
+  .acad-tag {
+    font-family: var(--serif-display);
+    font-size: .5rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .acad-card h3 {
+    font-family: var(--serif-display);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gold-pale);
+    letter-spacing: .06em;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  .acad-card p {
+    font-family: var(--serif-text);
+    font-size: .95rem;
+    line-height: 1.8;
+    color: rgba(237,224,245,.55);
+  }
+  .acad-subjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin-top: 1.2rem;
+  }
+  .acad-subject {
+    font-family: var(--serif-display);
+    font-size: .45rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(155,89,182,.3);
+    padding: .3rem .7rem;
+  }
+
+  /* ══════════════════════════════════════
+     ADMISSIONS BANNER
+  ══════════════════════════════════════ */
+  #admissions-banner {
+    background: var(--gold);
+    padding: 5rem 2rem;
+  }
+  .admissions-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+  }
+  .admissions-inner h2 {
+    font-family: var(--serif-display);
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: .04em;
+    line-height: 1.2;
+  }
+  .admissions-inner p {
+    font-family: var(--serif-text);
+    font-size: 1rem;
+    color: rgba(30,13,53,.75);
+    margin-top: .8rem;
+    line-height: 1.7;
+  }
+  .btn-dark {
+    font-family: var(--serif-display);
+    font-size: .6rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold-lt);
+    background: var(--navy);
+    border: 1px solid var(--navy);
+    padding: 1rem 2.2rem;
+    cursor: pointer;
+    transition: all .3s;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  .btn-dark:hover { background: var(--navy-mid); }
+
+  /* ══════════════════════════════════════
+     VALUES
+  ══════════════════════════════════════ */
+  #values { background: var(--cream); }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--stone);
+    margin-top: 1rem;
+  }
+  .value-item {
+    background: var(--cream);
+    padding: 2.5rem 2.8rem;
+    display: flex;
+    gap: 1.5rem;
+    transition: background .3s;
+  }
+  .value-item:hover { background: var(--white); }
+  .value-num {
+    font-family: var(--serif-display);
+    font-size: 2.5rem;
+    color: rgba(155,89,182,.18);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 2.5rem;
+    font-weight: 700;
+  }
+  .value-text h4 {
+    font-family: var(--serif-display);
+    font-size: .75rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: .6rem;
+  }
+  .value-text p {
+    font-family: var(--serif-text);
+    font-size: .95rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+  }
+
+  /* ══════════════════════════════════════
+     GALLERY
+  ══════════════════════════════════════ */
+  #gallery { background: var(--white); padding-bottom: 0; }
+  .gallery-mosaic {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 240px);
+    gap: 4px;
+    margin-top: 3rem;
+  }
+  .gallery-item {
+    overflow: hidden;
+    position: relative;
+  }
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .6s cubic-bezier(.25,.46,.45,.94), filter .6s;
+    filter: brightness(.85) sepia(.1);
+  }
+  .gallery-item:hover img { transform: scale(1.08); filter: brightness(.95) sepia(0); }
+  .gallery-item.large { grid-column: span 2; grid-row: span 2; }
+  .gallery-item.tall { grid-row: span 2; }
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(30,13,53,.25) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* ══════════════════════════════════════
+     QUOTE STRIP
+  ══════════════════════════════════════ */
+  #quote-strip {
+    background: var(--navy-mid);
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .quote-mark {
+    font-family: 'Georgia', serif;
+    font-size: 6rem;
+    color: rgba(155,89,182,.2);
+    line-height: .5;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .quote-text {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    color: var(--gold-pale);
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+  }
+  .quote-attr {
+    font-family: var(--serif-display);
+    font-size: .55rem;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ══════════════════════════════════════
+     CONTACT / FOOTER
+  ══════════════════════════════════════ */
+  #contact { background: var(--cream); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-info h3 {
+    font-family: var(--serif-display);
+    font-size: .7rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .contact-detail-icon {
+    width: 36px; height: 36px;
+    flex-shrink: 0;
+    border: 1px solid rgba(155,89,182,.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+  }
+  .contact-detail-icon svg { width: 16px; height: 16px; }
+  .contact-detail-text strong {
+    font-family: var(--serif-display);
+    font-size: .6rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--navy);
+    display: block;
+    margin-bottom: .3rem;
+  }
+  .contact-detail-text span, .contact-detail-text a {
+    font-family: var(--serif-text);
+    font-size: .95rem;
+    color: var(--text-mid);
+    display: block;
+    line-height: 1.6;
+    transition: color .2s;
+  }
+  .contact-detail-text a:hover { color: var(--gold); }
+  .contact-hours {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--stone);
+    background: var(--white);
+  }
+  .contact-hours h4 {
+    font-family: var(--serif-display);
+    font-size: .6rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: .8rem;
+  }
+  .contact-hours p {
+    font-family: var(--serif-text);
+    font-size: .95rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+  /* Contact form */
+  .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: .4rem; }
+  .form-group label {
+    font-family: var(--serif-display);
+    font-size: .55rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: var(--serif-text);
+    font-size: .95rem;
+    color: var(--text);
+    background: var(--white);
+    border: 1px solid var(--stone);
+    padding: .8rem 1rem;
+    outline: none;
+    transition: border-color .25s;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  /* ══════════════════════════════════════
+     FOOTER
+  ══════════════════════════════════════ */
+  footer {
+    background: var(--navy);
+    padding: 4rem 2rem 2rem;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(155,89,182,.15);
+  }
+  .footer-brand h3 {
+    font-family: var(--serif-display);
+    font-size: .7rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold-lt);
+    margin-bottom: .5rem;
+  }
+  .footer-brand p {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: .9rem;
+    color: rgba(237,224,245,.5);
+    line-height: 1.7;
+    margin-top: .6rem;
+  }
+  .footer-col h4 {
+    font-family: var(--serif-display);
+    font-size: .55rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li {
+    font-family: var(--serif-text);
+    font-size: .9rem;
+    color: rgba(237,224,245,.5);
+    margin-bottom: .6rem;
+    transition: color .2s;
+    cursor: pointer;
+  }
+  .footer-col ul li:hover { color: var(--gold-lt); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-copy {
+    font-family: var(--serif-display);
+    font-size: .5rem;
+    letter-spacing: .18em;
+    color: rgba(237,224,245,.3);
+    text-transform: uppercase;
+  }
+  .footer-social { display: flex; gap: .8rem; }
+  .social-btn {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(155,89,182,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(155,89,182,.5);
+    transition: all .25s;
+    cursor: pointer;
+  }
+  .social-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .social-btn svg { width: 14px; height: 14px; }
+
+  /* ══════════════════════════════════════
+     ANIMATIONS ON SCROLL
+  ══════════════════════════════════════ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: .1s; }
+  .reveal-delay-2 { transition-delay: .2s; }
+  .reveal-delay-3 { transition-delay: .3s; }
+  .reveal-delay-4 { transition-delay: .4s; }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════════════ */
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-toggle { display: flex; }
+    .nav-links {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      padding: 1rem 0 1.5rem;
+      background: rgba(30,13,53,.98);
+      border-bottom: 1px solid rgba(155,89,182,.25);
+      backdrop-filter: blur(10px);
+      transform: translateY(-120%);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform .35s cubic-bezier(.16,1,.3,1), opacity .25s, visibility .25s;
+      pointer-events: none;
+    }
+    body.nav-open .nav-links {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .nav-links li { width: 100%; text-align: center; border-bottom: 1px solid rgba(155,89,182,.12); }
+    .nav-links a {
+      display: block;
+      padding: 1rem 1.5rem;
+      font-size: .68rem;
+    }
+    .nav-links a::after { display: none; }
+    .nav-links .nav-cta { margin: .75rem 1.5rem 0; text-align: center; display: block; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .story-grid { grid-template-columns: 1fr; }
+    .story-img-stack { height: 340px; margin-bottom: 2rem; }
+    .academics-cards { grid-template-columns: 1fr; }
+    .values-grid { grid-template-columns: 1fr; }
+    .gallery-mosaic { grid-template-columns: repeat(2,1fr); grid-template-rows: repeat(4, 200px); }
+    .gallery-item.large { grid-column: span 2; }
+    .gallery-item.tall { grid-row: span 1; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .admissions-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- ░░░ NAV ░░░ -->
+<nav aria-label="Primary">
+  <a href="#" class="nav-brand">
+    <img src="logo.png" class="nav-crest" alt="Vision Valley School Logo" style="background:white;border-radius:50%;padding:2px;object-fit:contain;">
+    <div class="nav-title-block">
+      <span class="nav-name">Vision Valley School</span>
+      <span class="nav-sub">Antananarivo, Madagascar · Est. 2000</span>
+    </div>
+  </a>
+  <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+    <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <ul class="nav-links" id="site-nav">
+    <li><a href="#pillars">About</a></li>
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#academics">Academics</a></li>
+    <li><a href="#values">Values</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact" class="nav-cta"><span>Admissions</span></a></li>
+  </ul>
+</nav>
+
+<main id="main-content">
+
+<!-- ░░░ HERO ░░░ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-top-rule"></div>
+  <div class="hero-content">
+    <span class="hero-sup">Est. 2000 · Antananarivo, Madagascar</span>
+
+    <!-- School logo -->
+    <img class="hero-crest-large" src="logo.png" alt="Vision Valley School Logo" style="object-fit:contain;filter:drop-shadow(0 0 30px rgba(155,89,182,.4));background:rgba(255,255,255,.08);border-radius:50%;padding:8px;">
+
+    <h1 class="hero-title">Nurturing <em>Faith,</em><br>Learning &amp; Leadership</h1>
+    <p class="hero-location">Lot 177H Bis Amboropotsy Talatamaty · Antananarivo, Madagascar</p>
+
+    <div class="hero-divider">
+      <span></span>
+      <span class="hero-divider-icon">✦</span>
+      <span></span>
+    </div>
+
+    <blockquote class="hero-verse">
+      "Train up a child in the way he should go: and when he is old, he will not depart from it."
+      <cite>— Proverbs 22:6</cite>
+    </blockquote>
+
+    <div class="hero-btns">
+      <a href="#admissions-banner" class="btn-primary"><span>Apply for Admission</span></a>
+      <a href="#story" class="btn-ghost">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ░░░ PILLARS ░░░ -->
+<section id="pillars">
+  <div class="section-inner">
+    <span class="section-label reveal">Why Vision Valley</span>
+    <h2 class="section-title reveal">A School Built Upon <em>Eternal Foundations</em></h2>
+    <div class="section-rule reveal">
+      <span></span><div class="section-rule-diamond"></div><span></span>
+    </div>
+    <p class="pillars-lead reveal">
+      Founded in 2000 by Gavin and Rhoda Jordaan from South Africa, Vision Valley School is a vibrant community of over 250 students from more than 14 nationalities — united by Christian values and a passion for academic excellence.
+    </p>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal reveal-delay-1">
+        <svg class="pillar-icon" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M26 8 L26 44"/>
+          <path d="M14 18 L38 18"/>
+          <circle cx="26" cy="8" r="4"/>
+          <path d="M10 44 L42 44"/>
+          <path d="M18 30 Q26 24 34 30"/>
+        </svg>
+        <h3>Christian Foundation</h3>
+        <p>Every aspect of school life is rooted in Christian principles — fostering moral character, compassion, and a sense of divine purpose in each student.</p>
+      </div>
+      <div class="pillar-card reveal reveal-delay-2">
+        <svg class="pillar-icon" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="8" y="12" width="36" height="28" rx="1"/>
+          <path d="M8 20 L44 20"/>
+          <path d="M20 12 L20 40"/>
+          <circle cx="14" cy="16" r="2" fill="currentColor"/>
+          <circle cx="14" cy="28" r="1.5" fill="currentColor"/>
+          <circle cx="14" cy="34" r="1.5" fill="currentColor"/>
+        </svg>
+        <h3>British Curriculum</h3>
+        <p>Approved by Pearson Edexcel, we offer internationally recognised IGCSE and A-Level qualifications — opening doors to universities across the world.</p>
+      </div>
+      <div class="pillar-card reveal reveal-delay-3">
+        <svg class="pillar-icon" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="26" cy="20" r="10"/>
+          <path d="M12 44 C12 34 40 34 40 44"/>
+          <path d="M36 14 C38 10 44 12 42 18"/>
+          <circle cx="41" cy="20" r="6"/>
+        </svg>
+        <h3>14+ Nationalities</h3>
+        <p>Our international community creates an enriching cross-cultural learning environment — preparing students to thrive in our diverse, interconnected world.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ STORY ░░░ -->
+<section id="story">
+  <div class="section-inner">
+    <div class="story-grid">
+      <div class="story-img-stack reveal">
+        <img class="story-img-main" 
+          src="https://static.wixstatic.com/media/980a85_ec612e9e6f6146e89fb9ee62acc5d017~mv2.jpg/v1/fit/w_960,h_642,q_90,enc_avif,quality_auto/980a85_ec612e9e6f6146e89fb9ee62acc5d017~mv2.jpg"
+          alt="Vision Valley School students" />
+        <img class="story-img-accent"
+          src="https://static.wixstatic.com/media/980a85_1b6f8dd781f242418c4189ea96d77130~mv2.jpg/v1/fit/w_480,h_320,q_90,enc_avif,quality_auto/980a85_1b6f8dd781f242418c4189ea96d77130~mv2.jpg"
+          alt="Classroom life" />
+        <div class="story-img-badge">
+          <span>25</span>
+          <small>Years</small>
+        </div>
+      </div>
+      <div class="story-body">
+        <span class="section-label reveal" style="text-align:left;display:block;margin-bottom:.8rem">Our Heritage</span>
+        <h2 class="reveal">A Vision Born in <em>Faith &amp; Courage</em></h2>
+        <p class="reveal">
+          In the 1990s, Gavin and Rhoda Jordaan discovered a calling during their visits to Madagascar. They recognised a deep need for quality, faith-based education on this beautiful island. In 1999, they courageously relocated from South Africa, and in 2000, the seeds of Vision Valley School were planted in their own home in Androhibe.
+        </p>
+        <p class="reveal">
+          From those humble beginnings — just three children — the school has grown into a flourishing community of over 250 students spanning Preschool through Grade 12. Today, our graduates attend universities in Canada, the United States, the United Kingdom, South Africa, and beyond.
+        </p>
+        <p class="reveal">
+          The medium of instruction is English, complemented by French and conversational Malagasy — preparing every student for both local impact and global contribution.
+        </p>
+        <div class="story-stats reveal">
+          <div class="stat">
+            <span class="stat-num">250+</span>
+            <span class="stat-label">Students</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">14+</span>
+            <span class="stat-label">Nationalities</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">25</span>
+            <span class="stat-label">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ ACADEMICS ░░░ -->
+<section id="academics">
+  <div class="section-inner">
+    <span class="section-label reveal">Academic Excellence</span>
+    <h2 class="section-title reveal">A <em>Rigorous</em> British Curriculum</h2>
+    <div class="section-rule reveal">
+      <span style="background:linear-gradient(90deg,transparent,rgba(155,89,182,.4))"></span>
+      <div class="section-rule-diamond"></div>
+      <span style="background:linear-gradient(90deg,rgba(155,89,182,.4),transparent)"></span>
+    </div>
+    <p class="academics-intro reveal">
+      Our curriculum is designed to nurture critical thinkers and global citizens — from our foundational lower school years through internationally accredited qualifications.
+    </p>
+    <div class="academics-cards">
+      <div class="acad-card reveal reveal-delay-1">
+        <span class="acad-tag">Preschool – Grade 8</span>
+        <h3>Primary &amp; Middle School Curriculum</h3>
+        <p>A rich blend of South African, Malagasy, and French curricula delivers a well-rounded, multilingual educational experience in the formative years — encouraging curiosity, creativity, and a love of learning.</p>
+        <div class="acad-subjects">
+          <span class="acad-subject">English</span>
+          <span class="acad-subject">Mathematics</span>
+          <span class="acad-subject">Science</span>
+          <span class="acad-subject">French</span>
+          <span class="acad-subject">Malagasy</span>
+          <span class="acad-subject">Arts</span>
+          <span class="acad-subject">Scripture</span>
+        </div>
+      </div>
+      <div class="acad-card reveal reveal-delay-2">
+        <span class="acad-tag">Pearson Edexcel · Grade 9–11</span>
+        <h3>IGCSE Programme</h3>
+        <p>Since 2017, Vision Valley has been approved by Pearson Edexcel to offer the International General Certificate of Secondary Education — a globally respected qualification that opens the door to tertiary education worldwide.</p>
+        <div class="acad-subjects">
+          <span class="acad-subject">English Language</span>
+          <span class="acad-subject">English Literature</span>
+          <span class="acad-subject">Mathematics</span>
+          <span class="acad-subject">Geography</span>
+          <span class="acad-subject">Chemistry</span>
+          <span class="acad-subject">Physics</span>
+          <span class="acad-subject">Biology</span>
+          <span class="acad-subject">ICT</span>
+          <span class="acad-subject">French</span>
+        </div>
+      </div>
+      <div class="acad-card reveal reveal-delay-3">
+        <span class="acad-tag">Pearson Edexcel · Grade 12–13</span>
+        <h3>A-Level Programme</h3>
+        <p>Our two-year advanced-level qualifications provide in-depth subject specialisation and are recognised by universities worldwide — equipping graduates to pursue higher education on every continent.</p>
+        <div class="acad-subjects">
+          <span class="acad-subject">Sciences</span>
+          <span class="acad-subject">Mathematics</span>
+          <span class="acad-subject">Languages</span>
+          <span class="acad-subject">Humanities</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ ADMISSIONS BANNER ░░░ -->
+<section id="admissions-banner">
+  <div class="admissions-inner">
+    <div>
+      <h2>Begin Your Child's Journey at<br>Vision Valley School</h2>
+      <p>We welcome families from all nationalities who share our commitment to excellence, faith, and holistic development. Discover our enrollment process, tuition structures, and available subsidies.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:.8rem;align-items:flex-start">
+      <a href="mailto:contact@visionvalleyschool.com" class="btn-dark">Enquire Now</a>
+      <a href="#contact" class="btn-dark" style="background:transparent;border-color:var(--navy);color:var(--navy);">Contact the Office</a>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ VALUES ░░░ -->
+<section id="values">
+  <div class="section-inner">
+    <span class="section-label reveal">Core Values</span>
+    <h2 class="section-title reveal">The <em>Character</em> We Cultivate</h2>
+    <div class="section-rule reveal">
+      <span></span><div class="section-rule-diamond"></div><span></span>
+    </div>
+    <div class="values-grid">
+      <div class="value-item reveal reveal-delay-1">
+        <div class="value-num">01</div>
+        <div class="value-text">
+          <h4>Student Discipline</h4>
+          <p>We cultivate a culture of responsibility, self-governance, and mutual respect — preparing students to be dependable members of society.</p>
+        </div>
+      </div>
+      <div class="value-item reveal reveal-delay-2">
+        <div class="value-num">02</div>
+        <div class="value-text">
+          <h4>Christian Principles</h4>
+          <p>Our moral framework is rooted in the timeless truths of Scripture — guiding every decision, interaction, and aspiration of school life.</p>
+        </div>
+      </div>
+      <div class="value-item reveal reveal-delay-1">
+        <div class="value-num">03</div>
+        <div class="value-text">
+          <h4>Well-Trained Educators</h4>
+          <p>Our teachers are passionate professionals — committed to shaping young minds with expertise, empathy, and enduring dedication.</p>
+        </div>
+      </div>
+      <div class="value-item reveal reveal-delay-2">
+        <div class="value-num">04</div>
+        <div class="value-text">
+          <h4>Safe &amp; Secure Environment</h4>
+          <p>Every student thrives within a nurturing, physically and emotionally safe community where they are known, valued, and protected.</p>
+        </div>
+      </div>
+      <div class="value-item reveal reveal-delay-1">
+        <div class="value-num">05</div>
+        <div class="value-text">
+          <h4>Quality Administration</h4>
+          <p>Governed by a dedicated board and registered with Madagascar's Ministry of Education, we ensure transparent, excellent institutional management.</p>
+        </div>
+      </div>
+      <div class="value-item reveal reveal-delay-2">
+        <div class="value-num">06</div>
+        <div class="value-text">
+          <h4>Evolving Curriculum</h4>
+          <p>We are committed to continual curriculum assessment and development — remaining dynamic and relevant in an ever-changing world.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ GALLERY ░░░ -->
+<section id="gallery">
+  <div class="section-inner">
+    <span class="section-label reveal">School Life</span>
+    <h2 class="section-title reveal">A Glimpse Into Our <em>Community</em></h2>
+    <div class="section-rule reveal">
+      <span></span><div class="section-rule-diamond"></div><span></span>
+    </div>
+  </div>
+  <div class="gallery-mosaic" style="max-width:1300px;margin:2rem auto 0">
+    <div class="gallery-item large">
+      <img src="https://static.wixstatic.com/media/980a85_5ba5221691004bb38a8158a6099e7255~mv2.jpg/v1/fit/w_960,h_640,q_90,enc_avif,quality_auto/980a85_5ba5221691004bb38a8158a6099e7255~mv2.jpg" alt="School life">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item tall">
+      <img src="https://static.wixstatic.com/media/980a85_edae1cca25fd42eeb3c470f7873be7e8~mv2.jpg/v1/fit/w_480,h_722,q_90,enc_avif,quality_auto/980a85_edae1cca25fd42eeb3c470f7873be7e8~mv2.jpg" alt="Students">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://static.wixstatic.com/media/980a85_0e4d2262190a46148df5b7fcc9e01c5c~mv2.jpg/v1/fit/w_480,h_321,q_90,enc_avif,quality_auto/980a85_0e4d2262190a46148df5b7fcc9e01c5c~mv2.jpg" alt="Classroom">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://static.wixstatic.com/media/980a85_1b6f8dd781f242418c4189ea96d77130~mv2.jpg/v1/fit/w_480,h_320,q_90,enc_avif,quality_auto/980a85_1b6f8dd781f242418c4189ea96d77130~mv2.jpg" alt="Campus">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://static.wixstatic.com/media/980a85_413b21a06c5b4a66854326a0c225dd49~mv2.jpg/v1/fit/w_480,h_319,q_90,enc_avif,quality_auto/980a85_413b21a06c5b4a66854326a0c225dd49~mv2.jpg" alt="Activities">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://static.wixstatic.com/media/980a85_4da0c4e8c50e4451bbf50906f9742f85~mv2.jpg/v1/fit/w_960,h_640,q_90,enc_avif,quality_auto/980a85_4da0c4e8c50e4451bbf50906f9742f85~mv2.jpg" alt="Community">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://static.wixstatic.com/media/980a85_d0a83afafce04d389887eb58782235a4~mv2.jpg/v1/fit/w_960,h_640,q_90,enc_avif,quality_auto/980a85_d0a83afafce04d389887eb58782235a4~mv2.jpg" alt="School events">
+      <div class="gallery-overlay"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ QUOTE STRIP ░░░ -->
+<section id="quote-strip">
+  <div class="section-inner" style="text-align:center">
+    <span class="quote-mark">"</span>
+    <p class="quote-text reveal">In education, there is no one-size-fits-all solution. Each student is a unique individual, and effective teaching involves adapting to their needs.</p>
+    <span class="quote-attr reveal">— Harry Wong</span>
+  </div>
+</section>
+
+<!-- ░░░ CONTACT ░░░ -->
+<section id="contact">
+  <div class="section-inner">
+    <span class="section-label reveal">Get In Touch</span>
+    <h2 class="section-title reveal">We Would Love to <em>Hear From You</em></h2>
+    <div class="section-rule reveal">
+      <span></span><div class="section-rule-diamond"></div><span></span>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>School Office</h3>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Address</strong>
+            <span>Lot 177H Bis Amboropotsy Talatamaty</span>
+            <span>Antananarivo, Madagascar</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.53 8.5a19.79 19.79 0 01-3.07-8.57A2 2 0 012.44 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Telephone</strong>
+            <a href="tel:+261330496246">+261 33 04 962 46</a>
+            <a href="tel:+261207644662">+261 20 76 446 62</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Email</strong>
+            <a href="mailto:contact@visionvalleyschool.com">contact@visionvalleyschool.com</a>
+          </div>
+        </div>
+        <div class="contact-hours">
+          <h4>Office Hours</h4>
+          <p>Monday – Friday<br>7:30 am – 4:15 pm</p>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="contact-form">
+          <h3 style="font-family:var(--serif-display);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem">Admissions Enquiry</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="enquiry-parent">Parent / Guardian Name</label>
+              <input id="enquiry-parent" type="text" placeholder="Full name" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="enquiry-email">Email Address</label>
+              <input id="enquiry-email" type="email" placeholder="your@email.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="enquiry-child">Child's Name</label>
+              <input id="enquiry-child" type="text" placeholder="Full name" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="enquiry-grade">Grade Applying For</label>
+              <select id="enquiry-grade">
+                <option value="">Select grade…</option>
+                <option>Preschool</option>
+                <option>Grade 1</option>
+                <option>Grade 2</option>
+                <option>Grade 3</option>
+                <option>Grade 4</option>
+                <option>Grade 5</option>
+                <option>Grade 6</option>
+                <option>Grade 7</option>
+                <option>Grade 8</option>
+                <option>Grade 9 (IGCSE)</option>
+                <option>Grade 10 (IGCSE)</option>
+                <option>Grade 11 (IGCSE)</option>
+                <option>Grade 12 (A-Level)</option>
+                <option>Grade 13 (A-Level)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="enquiry-nationality">Nationality</label>
+            <input id="enquiry-nationality" type="text" placeholder="Your nationality" autocomplete="country-name">
+          </div>
+          <div class="form-group">
+            <label for="enquiry-message">Message</label>
+            <textarea id="enquiry-message" placeholder="Please share any questions or context about your child's educational background…"></textarea>
+          </div>
+          <button type="button" id="enquiry-submit" class="btn-primary" style="align-self:flex-start"><span>Send Enquiry</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ░░░ FOOTER ░░░ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Vision Valley School</h3>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:.3rem">
+          <div style="width:30px;height:1px;background:rgba(155,89,182,.3)"></div>
+          <span style="font-family:var(--serif-display);font-size:.45rem;letter-spacing:.2em;color:rgba(155,89,182,.5);text-transform:uppercase">Madagascar</span>
+        </div>
+        <p>"Nurturing Faith, Learning, and Leadership"</p>
+        <p style="margin-top:.5rem">Registered with the Madagascar Ministry of Education. Pearson Edexcel approved for IGCSE &amp; A-Level.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#pillars">About Us</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#values">Our Values</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Admissions</h4>
+        <ul>
+          <li>Enrollment Process</li>
+          <li>Costs &amp; Subsidies</li>
+          <li>Financial Policies</li>
+          <li>Career Opportunities</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>+261 33 04 962 46</li>
+          <li>+261 20 76 446 62</li>
+          <li style="word-break:break-all">contact@visionvalleyschool.com</li>
+          <li>Talatamaty, Antananarivo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Vision Valley School Madagascar · All Rights Reserved</span>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/VVSMadagascar/" target="_blank" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="mailto:contact@visionvalleyschool.com" class="social-btn" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── Scroll reveal ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  /* ── Nav transparency ── */
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.borderBottomColor = window.scrollY > 60
+      ? 'rgba(155,89,182,.3)'
+      : 'rgba(155,89,182,.15)';
+  });
+
+  /* ── Mobile nav ── */
+  const navToggle = document.querySelector('.nav-toggle');
+  const siteNav = document.getElementById('site-nav');
+  function setNavOpen(open) {
+    document.body.classList.toggle('nav-open', open);
+    if (navToggle) {
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  navToggle?.addEventListener('click', () => setNavOpen(!document.body.classList.contains('nav-open')));
+  siteNav?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => setNavOpen(false));
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) setNavOpen(false);
+  });
+
+  /* ── Admissions enquiry → mailto ── */
+  const enquiryBtn = document.getElementById('enquiry-submit');
+  enquiryBtn?.addEventListener('click', function () {
+    const parent = document.getElementById('enquiry-parent')?.value.trim() || '';
+    const email = document.getElementById('enquiry-email')?.value.trim() || '';
+    const child = document.getElementById('enquiry-child')?.value.trim() || '';
+    const grade = document.getElementById('enquiry-grade')?.value || '';
+    const nationality = document.getElementById('enquiry-nationality')?.value.trim() || '';
+    const message = document.getElementById('enquiry-message')?.value.trim() || '';
+    if (!parent || !email) {
+      alert('Please enter your name and email so we can reply to your enquiry.');
+      return;
+    }
+    const body = [
+      'Admissions enquiry — Vision Valley School',
+      '',
+      'Parent / Guardian: ' + parent,
+      'Email: ' + email,
+      "Child's name: " + child,
+      'Grade: ' + (grade || '—'),
+      'Nationality: ' + (nationality || '—'),
+      '',
+      'Message:',
+      message || '—'
+    ].join('\n');
+    const mailto = 'mailto:contact@visionvalleyschool.com?subject=' +
+      encodeURIComponent('Admissions enquiry — ' + (child || parent)) +
+      '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
+    this.innerHTML = '<span>✓ Opening your email app…</span>';
+    this.style.background = '#2d6a4f';
+    this.style.border = '1px solid #2d6a4f';
+  });
+</script>
+</body>
+</html>
